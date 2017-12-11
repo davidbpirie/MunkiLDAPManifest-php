@@ -1,0 +1,21 @@
+{
+    "name": "DavidBPirie/MunkiLDAPManifest-php",
+    "description": "Manage Munki manifest content with LDAP via Computers and Groups objects.",
+    "license": "Apache-2.0",
+    "keywords": ["MunkiLDAPManifest-php"],
+    "authors": [
+        {
+            "name": "David Pirie",
+            "email": "davidbpirie@mac.com"
+        }
+    ],
+    "require": {
+        "rodneyrehm/plist": "2.*"
+    },
+    "require-dev": { "phpdocumentor/phpdocumentor": "2.*" },
+    "autoload": {
+        "psr-4": {
+            "DavidBPirie\\MunkiLDAPManifestPHP\\": "src"
+        }
+    }
+}
