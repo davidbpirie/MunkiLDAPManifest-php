@@ -2,6 +2,7 @@
 namespace DavidBPirie\MunkiLDAPManifestPHP;
 
 require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/vendor/rodneyrehm/plist/classes/CFPropertyList/CFPropertyList.php';
 
 if( php_sapi_name() == "cli" ) {
 	if( $argc < 2 ) {
