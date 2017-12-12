@@ -100,11 +100,15 @@ class ManifestComponent
                     if (( $member_key !== "count" ) &&
                         ( strpos($member, "CN=" . $client_id . ",") !== false )
                     ) {
-	                    if( strpos( $group[$ldap_attribute][0], $this->group_prefix ) === 0 ) {
-		                    $this->entries_ldap[] = substr($group[$ldap_attribute][0], strlen( $this->group_prefix));
-	                    } else {
-		                    $this->entries_ldap[] = $group[$ldap_attribute][0];
-	                    }
+	                    foreach( $group[$ldap_attribute] as $attribute_key => $attribute_value ) {
+		                    if ( $attribute_key !== "count" ) {
+			                    if( strpos( $attribute_value, $this->group_prefix ) === 0 ) {
+				                    $this->entries_ldap[] = substr($attribute_value, strlen( $this->group_prefix));
+			                    } else {
+				                    $this->entries_ldap[] = $attribute_value;
+			                    }
+			                }
+			            }
                         break;
                     }
                 }
