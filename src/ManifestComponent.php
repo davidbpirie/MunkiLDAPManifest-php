@@ -151,7 +151,7 @@ class ManifestComponent
     public function generateCFArray()
     {
         $entry_cfarray = new \CFPropertyList\CFArray();
-        $entries = array_unique(array_merge($this->entries_manual, $this->entries_ldap));
+        $entries = array_unique(array_merge($this->entries_ldap, $this->entries_manual));
         foreach ($entries as $entry) {
             $entry_cfarray->add(new \CFPropertyList\CFString($entry));
         }
