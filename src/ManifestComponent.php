@@ -114,6 +114,7 @@ class ManifestComponent
                 }
             }
         }
+        sort( $this->entries_ldap );
     }
 
     /**
